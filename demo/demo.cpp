@@ -9,6 +9,9 @@
 
 int main( void )
 {
+
+	GLFWwindow* _window;
+
     Renderer renderer;
 
     Sprite* pencils = new Sprite("assets/pencils.tga", 128, 128);
@@ -18,6 +21,7 @@ int main( void )
     float rot_z = 0.0f;
 
     do {
+
         // Clear the screen
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -43,3 +47,4 @@ int main( void )
 
     return 0;
 }
+
