@@ -1,6 +1,6 @@
 # CMake entry point
 cmake_minimum_required (VERSION 2.6)
-project (RT2D)
+project (mxp1)
 
 find_package(OpenGL REQUIRED)
 
@@ -50,25 +50,28 @@ add_definitions(
 )
 
 # Demo
-add_executable(demo
-    demo/demo.cpp
-    common/shader.h
-    common/shader.cpp
-    common/camera.h
-    common/camera.cpp
-    common/texture.h
-    common/texture.cpp
-    common/renderer.h
-    common/renderer.cpp
-    common/sprite.h
-    common/sprite.cpp
+add_executable(mxp1
+   	mxp1/demo.cpp
+   	mxp1/RenderSprite.cpp
+	mxp1/RenderSprite.h
+			
+   	common/shader.h
+   	common/shader.cpp
+        common/camera.h
+        common/camera.cpp
+  	common/texture.h
+  	common/texture.cpp
+  	common/renderer.h
+  	common/renderer.cpp
+  	common/sprite.h
+  	common/sprite.cpp
 )
-target_link_libraries(demo
+target_link_libraries(mxp1
     ${ALL_LIBS}
 )
 # Xcode and Visual working directories
-set_target_properties(demo PROPERTIES XCODE_ATTRIBUTE_CONFIGURATION_BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/demo/")
-create_target_launcher(demo WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/demo/")
+set_target_properties(mxp1 PROPERTIES XCODE_ATTRIBUTE_CONFIGURATION_BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/mxp1/")
+create_target_launcher(mxp1 WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/mxp1/")
 
 
 SOURCE_GROUP(common REGULAR_EXPRESSION ".*/common/.*" )
@@ -87,10 +90,10 @@ endif (NOT ${CMAKE_GENERATOR} MATCHES "Xcode" )
 
 # Copy assets to the build directory
 file(
-    COPY demo/assets
+    COPY mxp1/assets
     DESTINATION ${CMAKE_BINARY_DIR}
 )
 file(
-    COPY demo/shaders
+    COPY mxp1/shaders
     DESTINATION ${CMAKE_BINARY_DIR}
 )
