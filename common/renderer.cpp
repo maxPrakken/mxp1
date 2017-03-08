@@ -2,15 +2,13 @@
 
 Renderer::Renderer()
 {
-    window_width = 1920;
-    window_height = 1080;
+    window_width = 1280;
+    window_height = 720;
 
     fragment_shader    = "shaders/sprite.frag";
     vertex_shader    = "shaders/sprite.vert";
 
     this->init();
-
-	hideMouse();
 }
 
 Renderer::~Renderer()
@@ -18,14 +16,6 @@ Renderer::~Renderer()
     // Cleanup VBO and shader
     glDeleteProgram(programID);
     glDeleteTextures(1, &textureID);
-}
-
-void Renderer::update(float deltaTime) {
-	
-}
-
-void Renderer::hideMouse() {
-	glfwSetInputMode(_window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
 }
 
 int Renderer::init()
@@ -153,4 +143,3 @@ void Renderer::renderSprite(Sprite* sprite, float x, float y, float rot)
     glDisableVertexAttribArray(vertexPosition_modelspaceID);
     glDisableVertexAttribArray(vertexUVID);
 }
-

@@ -5,9 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
-#include <fstream>
-#include <sstream>
-#include <iostream>
 
 // Include GLEW
 #include <GL/glew.h>
@@ -36,10 +33,6 @@ class Renderer
 
         int width() { return window_width; };
         int height() { return window_height; };
-
-		virtual void update(float deltaTime);
-
-		void Renderer::hideMouse();
 
     private:
         int init();
