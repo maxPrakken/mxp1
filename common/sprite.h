@@ -18,6 +18,7 @@
 #include <glm/gtx/euler_angles.hpp>
 
 #include <common/texture.h>
+#include <common/vector2.h>
 
 class Sprite
 {

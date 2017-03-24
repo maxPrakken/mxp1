@@ -64,6 +64,8 @@ add_executable(demo
     common/sprite.cpp
     common/scene.cpp
     common/scene.h
+    common/vector2.cpp
+    common/vector2.h
 )
 target_link_libraries(demo
     ${ALL_LIBS}
