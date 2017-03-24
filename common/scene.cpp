@@ -11,6 +11,10 @@ Scene::Scene() {
 	spriteList.push_back(kingkong);
 	spriteList.push_back(rgba);
 
+	Entity* test = new Entity();
+
+	spriteList.push_back(test->workplox);
+
 	//use this to set position in the game scene
 	///kingkong->posX = 300;
 	///kingkong->posY = 400;

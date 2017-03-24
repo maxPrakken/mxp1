@@ -20,6 +20,7 @@
 
 #include <common/sprite.h>
 #include <common/print.h>
+#include <common/entity.h>
 
 class Scene {
 	public:
