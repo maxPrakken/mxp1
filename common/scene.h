@@ -19,11 +19,12 @@
 #include <glm/gtx/euler_angles.hpp>
 
 #include <common/sprite.h>
+#include <common/print.h>
 
 class Scene {
 	public:
 		Scene(); 
-		virtual ~Scene(); 
+		virtual ~Scene();
 
 		std::vector<Sprite*>spriteList;
 

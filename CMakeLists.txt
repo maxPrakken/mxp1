@@ -66,6 +66,8 @@ add_executable(demo
     common/scene.h
     common/vector2.cpp
     common/vector2.h
+    common/print.cpp
+    common/print.h
 )
 target_link_libraries(demo
     ${ALL_LIBS}
