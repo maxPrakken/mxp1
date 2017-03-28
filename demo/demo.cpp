@@ -7,16 +7,18 @@
 #include <common/renderer.h>
 #include <common/sprite.h>
 #include <common/scene.h>
+#include <common/core.h>
 
 int main( void )
 {
 	
 
     Renderer renderer;
+	Core* core = new Core();
 	Scene* myScene = new Scene();
 
     do {
-		renderer.renderScene(myScene);
+		core->runScene(myScene);
 
     } // Check if the ESC key was pressed or the window was closed
     while( glfwGetKey(renderer.window(), GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
