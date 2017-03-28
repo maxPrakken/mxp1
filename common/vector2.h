@@ -10,6 +10,8 @@ class Vector2 {
 		int x;
 		int y;
 
+		Vector2();
+
 		Vector2(int x_, int y_);
 		
 		virtual ~Vector2();

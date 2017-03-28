@@ -86,9 +86,11 @@ void Renderer::renderScene(Scene* scene) {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//render all sprites and set rotation
-	int s = scene->spriteList.size();
+	int s = scene->entityList.size();
 	for (int i = 0; i < s; i++) {
-		renderSprite(scene->spriteList[i], 0.0f);
+		if (scene->entityList[i]->getSprite() != NULL) {
+			renderSprite(scene->entityList[i]->getSprite(), 0.0f);
+		}
 	}
 
 	// Swap buffers

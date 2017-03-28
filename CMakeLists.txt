@@ -1,6 +1,6 @@
 # CMake entry point
 cmake_minimum_required (VERSION 2.6)
-project (RT2D)
+project (MXP1)
 
 find_package(OpenGL REQUIRED)
 
@@ -70,6 +70,8 @@ add_executable(demo
     common/print.h
     common/entity.cpp
     common/entity.h
+    common/core.cpp
+    common/core.h
 )
 target_link_libraries(demo
     ${ALL_LIBS}

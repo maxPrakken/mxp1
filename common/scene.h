@@ -22,15 +22,21 @@
 #include <common/print.h>
 #include <common/entity.h>
 
-class Scene {
+class Scene: public Entity {
 	public:
 		Scene(); 
 		virtual ~Scene();
 
+		void updateScene(float deltaTime);
+
 		std::vector<Sprite*>spriteList;
+		std::vector<Entity*>entityList;
 
 	private:
 
+		void _updateEntity(Entity* entity, float deltaTime);
+
+		bool _isRunning;
 
 	protected:
 
