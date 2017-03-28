@@ -12,8 +12,6 @@
 int main( void )
 {
 	
-
-    Renderer renderer;
 	Core* core = new Core();
 	Scene* myScene = new Scene();
 
@@ -21,8 +19,8 @@ int main( void )
 		core->runScene(myScene);
 
     } // Check if the ESC key was pressed or the window was closed
-    while( glfwGetKey(renderer.window(), GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
-           glfwWindowShouldClose(renderer.window()) == 0 );
+    while( glfwGetKey(core->getRenderer().window(), GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
+           glfwWindowShouldClose(core->getRenderer().window()) == 0 );
 
     //delete pencils;
     //delete kingkong;

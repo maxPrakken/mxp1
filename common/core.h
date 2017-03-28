@@ -19,6 +19,8 @@ class Core {
 		Core();
 		virtual ~Core();
 
+		Renderer getRenderer() { return _renderer; }
+
 		//starts running the scene on startup
 		void runScene(Scene* scene);
 
