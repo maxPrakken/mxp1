@@ -8,6 +8,7 @@ Entity::Entity() {
 
 	_guid = _nextGuid;
 	_nextGuid++;
+	_parent = NULL;
 
 	sprite = new Sprite("assets/kingkong.tga", 256, 256);
 	//sprite = NULL;
@@ -25,7 +26,8 @@ Entity::~Entity() {
 
 void Entity::update(float deltaTime) {
 
-	//this->sprite->posX += 10;
+	this->sprite->posX += 1;
+	//std::cout << "im updating" << std::endl;
 }
 
 void Entity::addChild(Entity* child) {
@@ -33,7 +35,7 @@ void Entity::addChild(Entity* child) {
 		child->_parent->removeChild(child);
 	}
 	child->_parent = this;
-	this->_children.push_back(child);
+	this->_children.push_back(child);;
 }
 
 void Entity::removeChild(Entity* child)

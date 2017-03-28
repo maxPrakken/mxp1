@@ -29,7 +29,6 @@ class Scene: public Entity {
 
 		void updateScene(float deltaTime);
 
-		std::vector<Sprite*>spriteList;
 		std::vector<Entity*>entityList;
 
 	private:

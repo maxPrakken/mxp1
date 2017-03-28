@@ -6,9 +6,10 @@ Scene::Scene() {
 
 	Entity* test = new Entity();
 
-	spriteList.push_back(test->sprite);
-	entityList.push_back(test);
+	this->addChild(test);
 
+	//spriteList.push_back(test->sprite);
+	entityList.push_back(test);
 
 	//use this to set position in the game scene
 	///kingkong->posX = 300;
@@ -20,19 +21,20 @@ Scene::~Scene() {
 }
 
 void Scene::updateScene(float deltaTime) {
-	//this->_updateEntity(this, deltaTime);
-	std::cout << "im updating" << std::endl;
+	this->_updateEntity(this, deltaTime);
+	//std::cout << "im updating" << std::endl;
+
 }
 
 void Scene::_updateEntity(Entity* entity, float deltaTime) {
-	/*entity->update(deltaTime);
+	entity->update(deltaTime);
 
 	//update the children
 	std::vector<Entity*> children = entity->children();
 	std::vector<Entity*>::iterator child;
 	for (child = children.begin(); child != children.end(); child++) {
 		this->_updateEntity(*child, deltaTime);
-	}*/
+	}
 }
 
 
