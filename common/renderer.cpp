@@ -3,8 +3,8 @@
 Renderer::Renderer()
 {
 	
-    window_width = 1280;
-    window_height = 720;
+    window_width = 1920;
+    window_height = 1080;
 
     fragment_shader    = "shaders/sprite.frag";
     vertex_shader    = "shaders/sprite.vert";

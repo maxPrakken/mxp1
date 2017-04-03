@@ -21,6 +21,7 @@
 #include <common/sprite.h>
 #include <common/print.h>
 #include <common/entity.h>
+#include <common/input.h>
 
 class Scene: public Entity {
 	public:
@@ -29,6 +30,8 @@ class Scene: public Entity {
 
 		void updateScene(float deltaTime);
 
+		Input* input() { return _input; };
+
 		std::vector<Entity*>entityList;
 
 	private:
@@ -36,6 +39,8 @@ class Scene: public Entity {
 		void _updateEntity(Entity* entity, float deltaTime);
 
 		bool _isRunning;
+
+		Input*  _input;
 
 	protected:
 

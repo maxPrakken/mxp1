@@ -23,6 +23,7 @@
 #include <common/camera.h>
 #include <common/scene.h>
 #include <common/sprite.h>
+#include <common/renderer.h>
 
 class Renderer
 {
@@ -38,6 +39,8 @@ class Renderer
 
         int width() { return window_width; };
         int height() { return window_height; };
+
+		Entity* entity;
 
     private:
         int init();

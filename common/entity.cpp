@@ -28,6 +28,9 @@ void Entity::update(float deltaTime) {
 
 	this->sprite->posX += 1;
 	//std::cout << "im updating" << std::endl;
+
+	position.x = sprite->posX;
+	position.y = sprite->posY;
 }
 
 void Entity::addChild(Entity* child) {
