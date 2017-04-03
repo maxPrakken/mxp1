@@ -23,12 +23,14 @@ Scene::~Scene() {
 void Scene::updateScene(float deltaTime) {
 	this->_updateEntity(this, deltaTime);
 	//std::cout << "im updating" << std::endl;
+	if (Input::_getMouseDown(0)) {
+		print("pressing a button");
+	}
 
 }
 
 void Scene::_updateEntity(Entity* entity, float deltaTime) {
 	entity->update(deltaTime);
-
 	//update the children
 	std::vector<Entity*> children = entity->children();
 	std::vector<Entity*>::iterator child;

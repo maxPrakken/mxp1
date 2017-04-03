@@ -10,6 +10,8 @@ Renderer::Renderer()
     vertex_shader    = "shaders/sprite.vert";
 
     this->init();
+	Input::getInstance()->setWindow(window());
+
 }
 
 Renderer::~Renderer()

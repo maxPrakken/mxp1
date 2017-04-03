@@ -10,7 +10,6 @@
 #include <common/renderer.h>
 #include <common/entity.h>
 #include <common/scene.h>
-
 #include <glfw3.h>
 
 class Core {

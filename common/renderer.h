@@ -23,7 +23,8 @@
 #include <common/camera.h>
 #include <common/scene.h>
 #include <common/sprite.h>
-#include <common/renderer.h>
+#include <common/input.h>
+
 
 class Renderer
 {

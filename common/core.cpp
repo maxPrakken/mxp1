@@ -14,7 +14,8 @@ void Core::runScene(Scene* scene) {
 
 	scene->updateScene((float)_deltaTime); 
 
-	scene->input()->updateInput(_renderer.window());
+	//scene->input()->updateInput(_renderer.window());
+	Input::getInstance()->updateInput(_renderer.window());
 
 	_renderer.renderScene(scene);
 
