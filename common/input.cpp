@@ -16,6 +16,14 @@ bool Input::_getKey(int key)
 	return getInstance()->getKey(key);
 }
 
+bool Input::_getKey(char key) {
+	return getInstance()->getKey(key);
+}
+
+bool Input::_getKeyDown(char key) {
+	return getInstance()->getKeyDown(key);
+}
+
 bool Input::_getMouse(int button) {
 	return getInstance()->getMouse(button);
 }

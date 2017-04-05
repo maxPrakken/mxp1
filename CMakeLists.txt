@@ -72,6 +72,8 @@ add_executable(demo
     common/entity.h
     common/core.cpp
     common/core.h
+    common/input.cpp
+    common/input.h
 )
 target_link_libraries(demo
     ${ALL_LIBS}

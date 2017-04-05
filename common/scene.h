@@ -30,6 +30,10 @@ class Scene: public Entity {
 
 		void updateScene(float deltaTime);
 
+		void movement();
+
+		Entity* test;
+
 		std::vector<Entity*>entityList;
 
 	private:

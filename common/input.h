@@ -1,14 +1,3 @@
-/**
- * @file input.h
- *
- * @brief The Input header file.
- *
- * This file is part of RT2D, a 2D OpenGL framework.
- *
- * - Copyright 2015 Rik Teerling <rik@onandoffables.com>
- *   - Initial commit
- *   - [meruiden] scaling of window
- */
 
 #ifndef INPUT_H
 #define INPUT_H
@@ -22,37 +11,60 @@ class Input
 {
 public:
 	static Input* getInstance();
+
 	static bool _getKey(int key);
+	static bool _getKey(char key);
+	static bool _getKeyDown(char key);
 	static bool _getMouse(int button);
 	static bool _getMouseDown(int button);
 
 	void setWindow(GLFWwindow* w) { _window = w; };
-	bool getKey(int key) { return _keys[key]; }
 
+	//updates this class
 	void updateInput(GLFWwindow* w);
 
-	bool getMouse(int button) { return _mouse[button]; }
+	//get key as int when holding
+	bool getKey(int key) { return _keys[key]; }
 
+	//gets key as char when holding ''
+	bool getKey(char key) {return getKey((int)key); }
+
+	//gets key as int when pressed down
 	bool getKeyDown(int key) { return _keysDown[key]; }
 	
+	//gets key as char when pressed down ''
 	bool getKeyDown(char key) { return getKeyDown((int)key); }
-	
-	bool getMouseDown(int button) { return _mouseDown[button]; }
 
+	//get key as int when comming up again
 	bool getKeyUp(int key) { return _keysUp[key]; }
-	
+
+	//gets key as char when comming up again ''
 	bool getKeyUp(char key) { return getKeyUp((int)key); }
+
+
+	//gets mouseclick as int when holding
+	bool getMouse(int button) { return _mouse[button]; }
 	
+	//gets mouseclick as int when pressing down
+	bool getMouseDown(int button) { return _mouseDown[button]; }
+	
+	//gets mouseclick as int when getting up again
 	bool getMouseUp(int button) { return _mouseUp[button]; }
 
+	//gets mouse X position
 	double getMouseX() { return _mouseX; }
 	
+	//gets mouse Y position
 	double getMouseY() { return _mouseY; }
 	
+	//sets mouse position to X Y position
 	void setMouse(double x, double y) { glfwSetCursorPos(_window, x, y); };
 
+
+	//gets the width of the current open window
 	int getWindowWidth() { return _windowWidth; }
 	
+	//gets the height of the current open window
 	int getWindowHeight() { return _windowHeight; }
 
 private:

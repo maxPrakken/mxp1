@@ -26,7 +26,7 @@ Entity::~Entity() {
 
 void Entity::update(float deltaTime) {
 
-	this->sprite->posX += 1;
+	//this->sprite->posX += 1;
 	//std::cout << "im updating" << std::endl;
 
 	position.x = sprite->posX;
