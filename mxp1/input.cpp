@@ -1,4 +1,4 @@
-#include <common/input.h>
+#include <mxp1/input.h>
 
 ///use getkey Input::_getKey(keycode);
 

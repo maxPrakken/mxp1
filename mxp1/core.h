@@ -7,9 +7,9 @@
 #include <stdlib.h>
 #include <string>
 
-#include <common/renderer.h>
-#include <common/entity.h>
-#include <common/scene.h>
+#include <mxp1/renderer.h>
+#include <mxp1/entity.h>
+#include <mxp1/scene.h>
 #include <glfw3.h>
 
 class Core {

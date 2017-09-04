@@ -17,8 +17,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/euler_angles.hpp>
 
-#include <common/texture.h>
-#include <common/vector2.h>
+#include <mxp1/texture.h>
+#include <mxp1/vector2.h>
 
 class Sprite
 {

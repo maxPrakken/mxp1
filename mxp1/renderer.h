@@ -17,13 +17,13 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/euler_angles.hpp>
 
-#include <common/shader.h>
-#include <common/sprite.h>
-#include <common/texture.h>
-#include <common/camera.h>
-#include <common/scene.h>
-#include <common/sprite.h>
-#include <common/input.h>
+#include <mxp1/shader.h>
+#include <mxp1/sprite.h>
+#include <mxp1/texture.h>
+#include <mxp1/camera.h>
+#include <mxp1/scene.h>
+#include <mxp1/sprite.h>
+#include <mxp1/input.h>
 
 
 class Renderer

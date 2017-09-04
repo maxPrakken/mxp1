@@ -7,9 +7,9 @@
 #include <string>
 #include <vector>
 
-#include <common/print.h>
-#include <common/sprite.h>
-#include <common/vector2.h>
+#include <mxp1/print.h>
+#include <mxp1/sprite.h>
+#include <mxp1/vector2.h>
 
 class Entity {
 	public:

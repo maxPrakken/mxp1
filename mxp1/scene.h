@@ -18,10 +18,10 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/euler_angles.hpp>
 
-#include <common/sprite.h>
-#include <common/print.h>
-#include <common/entity.h>
-#include <common/input.h>
+#include <mxp1/sprite.h>
+#include <mxp1/print.h>
+#include <mxp1/entity.h>
+#include <mxp1/input.h>
 
 class Scene: public Entity {
 	public:
@@ -29,10 +29,6 @@ class Scene: public Entity {
 		virtual ~Scene();
 
 		void updateScene(float deltaTime);
-
-		void movement();
-
-		Entity* test;
 
 		std::vector<Entity*>entityList;
 

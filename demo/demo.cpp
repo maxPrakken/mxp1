@@ -4,10 +4,10 @@
 // Include GLFW
 #include <glfw3.h>
 
-#include <common/renderer.h>
-#include <common/sprite.h>
-#include <common/scene.h>
-#include <common/core.h>
+#include <mxp1/renderer.h>
+#include <mxp1/sprite.h>
+#include <mxp1/scene.h>
+#include <mxp1/core.h>
 
 int main( void )
 {

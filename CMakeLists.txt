@@ -32,6 +32,7 @@ include_directories(
     external/glfw-3.0.3/include/GLFW/
     external/glm-0.9.7.0/
     external/glew-1.9.0/include/
+	mxp1/
     .
 )
 
@@ -39,6 +40,7 @@ set(ALL_LIBS
     ${OPENGL_LIBRARY}
     GLFW_303
     GLEW_190
+	mxp1
 )
 
 add_definitions(
@@ -49,41 +51,57 @@ add_definitions(
     -D_CRT_SECURE_NO_WARNINGS
 )
 
+# mxp1 libary
+add_library(mxp1	
+	mxp1/shader.h
+    mxp1/shader.cpp
+    mxp1/camera.h
+    mxp1/camera.cpp
+    mxp1/texture.h
+    mxp1/texture.cpp
+    mxp1/renderer.h
+    mxp1/renderer.cpp
+    mxp1/sprite.h
+    mxp1/sprite.cpp
+    mxp1/scene.cpp
+    mxp1/scene.h
+    mxp1/vector2.cpp
+    mxp1/vector2.h
+    mxp1/print.cpp
+    mxp1/print.h
+    mxp1/entity.cpp
+    mxp1/entity.h
+    mxp1/core.cpp
+    mxp1/core.h
+    mxp1/input.cpp
+    mxp1/input.h
+)
+
+# game
+add_executable(game
+	game/main.cpp
+	game/myScene.cpp
+	game/myScene.h
+)
+
 # Demo
 add_executable(demo
     demo/demo.cpp
-    common/shader.h
-    common/shader.cpp
-    common/camera.h
-    common/camera.cpp
-    common/texture.h
-    common/texture.cpp
-    common/renderer.h
-    common/renderer.cpp
-    common/sprite.h
-    common/sprite.cpp
-    common/scene.cpp
-    common/scene.h
-    common/vector2.cpp
-    common/vector2.h
-    common/print.cpp
-    common/print.h
-    common/entity.cpp
-    common/entity.h
-    common/core.cpp
-    common/core.h
-    common/input.cpp
-    common/input.h
 )
 target_link_libraries(demo
     ${ALL_LIBS}
 )
+
+target_link_libraries(game
+	${ALL_LIBS}
+)
+
 # Xcode and Visual working directories
 set_target_properties(demo PROPERTIES XCODE_ATTRIBUTE_CONFIGURATION_BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/demo/")
 create_target_launcher(demo WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/demo/")
 
 
-SOURCE_GROUP(common REGULAR_EXPRESSION ".*/common/.*" )
+SOURCE_GROUP(mxp1 REGULAR_EXPRESSION ".*/mxp1/.*" )
 SOURCE_GROUP(shaders REGULAR_EXPRESSION ".*/.*shader$" )
 
 
